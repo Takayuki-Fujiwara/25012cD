@@ -1,6 +1,3 @@
-!pip install azure-cognitiveservices-vision-computervision == 0.9.1
-!pip install pillow == 11.0.0
-
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
