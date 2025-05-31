@@ -13,7 +13,7 @@ import streamlit as st
 
 # Streamlit Cloudの「Secrets」からAzure API keyとエンドポイントを取得
 subscription_key = st.secrets.AzureAPI.api_key
-endpoint = https://udemy-0511.cognitiveservices.azure.com/
+endpoint = st.secrets.AzureAPI.endpoint
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
