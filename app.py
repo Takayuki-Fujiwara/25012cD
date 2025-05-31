@@ -61,7 +61,7 @@ if uploaded_file is not None:
             caption = obj.object_property
 
             # フォントの読み込み
-            font_path = os.path.join(os.path.dirname(__file__), "Helvetica 400.ttf")
+            font_path = os.path.join(os.path.dirname(__file__), "font/Helvetica 400.ttf")
             font = ImageFont.truetype(font=font_path, size=50)
 
             # ラベルのサイズ計算と描画
