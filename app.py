@@ -4,12 +4,12 @@ from azure.cognitiveservices.vision.computervision.models import VisualFeatureTy
 from msrest.authentication import CognitiveServicesCredentials
 
 from array import array
-import os
-from PIL import Image
-import sys
-import time
 
-import json
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+import os
+import streamlit as st
 
 # Streamlit Cloudの「Secrets」からAzure API keyとエンドポイントを取得
 subscription_key = st.secrets.AzureAPI.api_key
@@ -35,9 +35,7 @@ def get_tags(filepath):
         tags_name.append(tag.name)
     return tags_name
 
-import streamlit as st
-from PIL import ImageDraw
-from PIL import ImageFont
+
 
 st.title("物体検出アプリ")
 uploaded_file = st.sidebar.file_uploader("Choose an image...", type = ["jpg", "png"])
